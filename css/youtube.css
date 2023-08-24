@@ -1,0 +1,607 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto","Arial",sans-serif;
+    position: relative;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+.contaner {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px) {
+    .contaner {
+        width: 100%;
+    }
+}
+@media (min-width:992px) {
+    .contaner {
+        width: 100%;
+    }
+}
+@media (min-width:1200px) {
+    .contaner {
+        width: 100%;
+    }
+}
+
+.img-top {
+    width: 100%;
+    position: relative;
+    transition: .3s;
+}
+.img-top:hover::before ,
+.img-top:hover::after{
+    opacity: 1;
+    background-color: #f00;
+}
+.img-top::before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    bottom: -2.1%;
+    left: 60%;
+    background-color: #ccc;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s;
+    z-index: 3;
+}
+.img-top::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ccc;
+    transition: .3s;
+    z-index: 3;
+}
+
+.img-top .layout {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: .3s;
+}
+.img-top:hover .layout{
+    background-color: rgb(0 0 0 / 30%);
+}
+
+.img-top img {
+    width: 100%;
+}
+
+.contaner > h3 {
+    color: #eee;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.contaner > p {
+    color: #777;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.contaner > p span {
+    color: #eee;
+    cursor: pointer;
+    transition: .3s;
+}
+.contaner > p span:hover {
+    color: #bbb;
+}
+
+.mid-top {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mid-top .left-top {
+    display: flex;
+    align-items: center;
+}
+
+.mid-top img {
+    width: 30px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.mid-top .left-top p {
+    color: #eee;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mid-top .left-top p span {
+    color: #777;
+    font-weight: normal;
+    margin-left: 7px;
+}
+
+.mid-top button {
+    background-color: #eee;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: .3s;
+}
+.mid-top button:hover {
+    background-color: #222;
+    color: #eee;
+}
+
+.img-contant {
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    z-index: 100;
+    left: 0;
+    top: 0;
+    color: #eee;
+    opacity: 0;
+    transition: .3s;
+}
+.img-contant:hover{
+    opacity: 1;
+}
+
+.img-contant .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 20px;
+    margin-bottom: 19%;
+}
+
+.img-contant .top .right i {
+    margin-left: 25px;
+}
+
+.img-contant .mid {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15%;
+}
+
+.img-contant .mid i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(0 0 0 / 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.img-contant .mid .fa-play {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+}
+
+.img-contant .botm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-contant .botm p {
+    font-size: 14px;
+}
+
+.img-contant .botm span {
+    color: #999;
+}
+
+.btom-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cont {
+    margin-right: 10px;
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eee;
+    gap: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+.cont:hover{
+    background-color: #444;
+}
+
+.aaa{
+    padding-right: 10px;
+    border-right: 1px solid rgb(255 255 255 / 30%);
+}
+
+.cont i {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btm-comment {
+    width: 100%;
+    background-color: #222;
+    color: #eee;
+    padding: 15px;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.btm-comment h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.btm-comment h3 span {
+    color: #777;
+    margin-left: 5px;
+}
+
+.btm-comment .content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.btm-comment .content div {
+    display: flex;
+    align-items: center;
+}
+
+.btm-comment .content img {
+    width: 23px;
+    border-radius: 50%;
+    border: 1px solid #777;
+    margin-right: 12px;
+}
+
+.btm-comment .content i {
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.box1 {
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.box1 .contaner{
+    margin-top: 10px;
+}
+
+.box1 .img img {
+    width: 100%;
+}
+
+.box1 .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.box1 .img::after{
+    content: attr(data-text);
+    color: #eee;
+    border-radius: 6px;
+    font-size: 12px;
+    position: absolute;
+    top: 87%;
+    right: 2%;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.box1 .conten {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box1 .conten div {
+    display: flex;
+}
+
+.box1 .conten div .mid-s {
+    display: flex;
+    flex-direction: column;
+}
+
+.box1 .conten div .mid-s h4 {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.box1 .conten div .mid-s p {
+    font-size: 13px;
+    color: #777;
+}
+
+.box1 .conten i {
+    font-size: 18px;
+}
+
+.box1 .conten img {
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #777;
+    margin-right: 15px;
+}
+
+.shorts {
+    color: #eee;
+    letter-spacing: 1px;
+}
+
+.shorts .heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.shorts .heading .so-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+.shorts .heading .so-logo::after{
+    content: "";
+    position: absolute;
+    left: 7%;
+    top: -95%;
+    width: 20px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #f00;
+    z-index: -1;
+    transform: rotate(-28deg);
+}
+.shorts .heading .so-logo::before{
+    content: "";
+    position: absolute;
+    left: 5%;
+    top: 44%;
+    width: 20px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #f00;
+    z-index: -1;
+    transform: rotate(-30deg);
+}
+
+.shorts .heading .so-logo i {
+    margin-right: 15px;
+    font-size: 8px;
+    position: relative;
+    left: 9px;
+}
+
+.shorts .heading h2 {
+    font-size: 18px;
+}
+
+.gg {
+    display: flex;
+    gap: 15px;
+    padding-left: 10px;
+}
+
+.shorts .box {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 40px;   
+}
+
+.shorts .box > div {
+    height: 350px;
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px;
+    /* margin:0 10px 30px 5px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shorts .box > div .top {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.shorts .box > div .botm h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.shorts .box > div .botm p {
+    font-size: 12px;
+}
+
+.selection {
+    color: #eee;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.selection .top {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selection .top .d1 {
+    display: flex;
+    align-items: center;
+}
+
+.selection .top .d1 img {
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #777;
+    margin-right: 15px;
+}
+
+.selection .top .d1 div h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.selection .top .d1 div p {
+    color: #777;
+    font-size: 15px;
+}
+
+.selection .top .d2 button {
+    background-color: #222;
+    padding: 7px 10px;
+    color: #eee;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: .3s;
+}
+.selection .top .d2 button:hover {
+    background-color: #eee;
+    color: #000;
+}
+
+.selection .top .d2 i {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.selection .mid {
+    margin-bottom: 20px;
+}
+
+.selection .mid h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.selection .mid .box {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #222;
+    padding:0 10px 0 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selection .mid .box > span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 80px;
+    top: 0;
+    background-color: #222;
+    z-index: -1;
+}
+
+
+.selection .mid .box div {
+    display: flex;
+    align-items: center;
+}
+
+.selection .mid .box div img {
+    width: 25%;
+    margin-right: 12px;
+}
+
+.selection .mid .box p {
+    color: #999;
+}
+
+.selection .botm h3 {
+    margin-bottom: 10px;
+    color: #777;
+    font-size: 17px;
+}
+
+.selection .botm .lik {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.selection .botm .lik .d1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.selection .botm .lik .d1 p {
+    margin-right: 15px;
+}
+
+.selection .botm .lik .d2 {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.selection .botm .btm-comment .content{
+    display: block;
+}
+
+.selection .botm .btm-comment .content input {
+    width: 100%;
+    background-color: #333;
+    border: none;
+    border-radius: 20px;
+    padding: 3px 7px;
+    color: #777;
+}
+.selection .botm .btm-comment .content input:focus{
+    outline: none;
+    border: 1px solid #777;
+}
